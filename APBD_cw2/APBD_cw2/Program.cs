@@ -1,4 +1,7 @@
 ﻿// w języku C# nazwa pliku i nazwa klasy nie muszą być takie same
+
+using APBD_cw2.Models; //automatycznie implementowane, bo jesteśmy w innej przestrzeni nazw
+
 public class CosTam // PascalCase - CosTam
 {
     public static void Main(string[] args)
@@ -31,14 +34,22 @@ public class CosTam // PascalCase - CosTam
         {
             
         }
+        
+        // 2.Klasy
+        // APBD_cw2.Models.Student stu); - tak też zadziała
+        Student stu = new Student();
+        stu.SetName("Kacper"); //name="Kacper"
+        stu.Nazwisko = "Kowalski";
+        stu.Imie = "Szymon";
+        
+        Console.WriteLine(stu.Nazwisko);
     }
 }
 
-// w jednym pliku możemy mieć wiele klas/interfejsó - nie jest to zalecane
-public class Student
-{
-    
-}
+// w jednym pliku możemy mieć wiele klas/interfejsów - nie jest to zalecane
+//public class Student
+//{
+//}
 
 // w przypadku Javy mamy package, a w przypadku C# mamy namespacese
 // namespace działają jak fodlery na dysku
